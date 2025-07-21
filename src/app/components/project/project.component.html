@@ -1,0 +1,15 @@
+<article class="flex flex-col items-start justify-between w-[40vw] bg-blue-600 text-white mt-[4vh] h-[35vh] rounded-lg p-[3vh]">
+
+    <h1 class="text-2xl">{{ project()?.title }}</h1>
+
+    <p class="">{{ project()?.description }}</p>
+
+    <div class="flex items-center justify-around mb-[3vh] self-center">
+
+        <a [href]="project()?.frontendLink" class="bg-black p-[1vh] rounded-xl">Frontend repository</a>
+
+        <a [href]="project()?.backendLink" class="ml-[5vw] bg-black p-[1vh] rounded-xl">Backend repository</a>
+
+    </div>
+
+</article>
