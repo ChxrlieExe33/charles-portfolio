@@ -1,6 +1,6 @@
-import {Job} from './models/Job';
+import {JobModel} from './models/job.model';
 
-export const experience : Job[] = [
+export const experience : JobModel[] = [
     {
         title: "Assistant Manager",
         timeFrame: "Sep 2021 - Present",

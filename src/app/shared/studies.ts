@@ -1,6 +1,6 @@
-import {Study} from './models/Study';
+import {StudyModel} from './models/study.model';
 
-export const studies: Study[] = [
+export const studies: StudyModel[] = [
     {
         title: "CFGS Desarrollo de Aplicaciones Web (DAW)",
         timeFrame: "2024 - 2026",

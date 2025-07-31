@@ -1,7 +1,6 @@
-export type Study = {
+export type JobModel = {
     title : string,
     timeFrame : string,
     description : string,
-    school : string,
-    schoolUrl : string,
-};
+    companyName : string,
+}
