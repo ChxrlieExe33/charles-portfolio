@@ -18,6 +18,10 @@
     "target": "ES2022",
     "module": "ES2022"
   },
+    "formatCodeOptions": {
+        "indentSize": 4,
+        "tabSize": 4
+    },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

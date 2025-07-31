@@ -1,0 +1,68 @@
+<article class="bg-[#262626] text-white w-[60%] flex flex-col items-center justify-between py-5 mt-3 px-20 rounded-2xl">
+
+    <h1 class="text-3xl my-4">About me</h1>
+
+    <p class="w-[85%] text-center my-4">
+        I'm a software developer from Malaga Spain, I am most interested and proficient in backend development using <span class="text-bold underline">Spring Boot</span> with Java, alongside <span class="text-bold underline">PostgreSQL</span>.
+        I am also proficient in <span class="text-bold underline">Angular</span>.
+        I love creating projects from scratch in my free time.
+
+        <br><br>
+        I am also very passionate about the world of <span class="text-bold underline">cybersecurity</span> and pentesting, I have the <span class="text-bold underline">PNPT Certification</span> from TCM Security, and I intend to advance my pentesting knowledge and skillset over time.
+    </p>
+
+    <h1 class="text-3xl my-4">Studies</h1>
+
+    <ul class="list-none flex flex-col items-start justify-between w-[95%]">
+
+        @for (study of studies; track study.title){
+
+            <li class="flex flex-col items-center justify-between w-full py-2">
+
+                <div class="flex items-center justify-between w-full">
+
+                    <h1 class="text-bold underline text-[#CD49D7]">{{ study.title }}</h1>
+
+                    <p>{{ study.timeFrame }}</p>
+                </div>
+
+                <a [href]="study.schoolUrl" target="_blank" class="self-start text-bold underline">{{ study.school }}</a>
+
+                <p class="my-2">
+                    {{ study.description }}
+                </p>
+
+            </li>
+
+        }
+
+    </ul>
+
+    <h1 class="text-3xl my-4">Experience</h1>
+
+    <ul class="list-none flex flex-col items-start justify-between w-[95%]">
+
+        @for (job of experience; track job.title) {
+
+            <li class="flex flex-col items-center justify-between w-full py-2">
+
+                <div class="flex items-center justify-between w-full">
+
+                    <h1 class="text-bold underline text-[#CD49D7]">{{ job.title }}</h1>
+
+                    <p>{{ job.timeFrame }}</p>
+                </div>
+
+                <p class="self-start text-bold underline">{{ job.companyName }}</p>
+
+                <p class="my-2">
+                    {{ job.description }}
+                </p>
+
+            </li>
+
+        }
+
+    </ul>
+
+</article>
