@@ -1,11 +1,5 @@
 import {Component, input, Input} from '@angular/core';
-
-export type Project = {
-    title : string,
-    description : string,
-    frontendLink : string,
-    backendLink : string,
-}
+import {Project} from '../../shared/models/project.model';
 
 @Component({
   selector: 'app-project',
