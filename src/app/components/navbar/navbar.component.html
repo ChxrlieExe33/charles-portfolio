@@ -1,6 +1,6 @@
-<header class="flex items-center justify-between h-[7vh] bg-neutral-800 w-full">
+<header class="flex items-center justify-between h-[11vh] md:h-[7vh] bg-neutral-800 w-full">
 
-    <a class="text-white ml-[2vw] hover:text-gray-500 text-2xl" routerLink="/" routerLinkActive="!text-[#CD49D7]" [routerLinkActiveOptions]="{exact: true}" >charlescrane.dev</a>
+    <a (click)="closeMenu()" class="text-white ml-4 md:ml-[2vw] hover:text-gray-500 text-2xl" routerLink="/" routerLinkActive="!text-[#CD49D7]" [routerLinkActiveOptions]="{exact: true}" >charlescrane.dev</a>
 
     <nav class="md:flex items-center justify-around h-full hidden">
 
@@ -11,5 +11,9 @@
         <a class="text-white mr-[2vw] text-lg hover:text-gray-500" routerLink="/blog" routerLinkActive="!text-[#CD49D7]">Blog</a>
 
     </nav>
+
+    <button mat-icon-button (click)="toggleMenu()" class="!block md:!hidden mr-2">
+        <mat-icon style="color: white;">{{ isOpen() ? 'close' : 'menu' }}</mat-icon>
+    </button>
 
 </header>

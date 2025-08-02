@@ -1,8 +1,8 @@
-<article class="bg-[#262626] text-white w-[60%] flex flex-col items-center justify-between py-5 mt-3 px-20 rounded-2xl">
+<article class="bg-[#262626] text-white w-[95%] md:w-[60%] flex flex-col items-center justify-between py-5 mt-3 px-4 md:px-20 rounded-2xl">
 
     <h1 class="text-3xl my-4">About me</h1>
 
-    <p class="w-[85%] text-center my-4">
+    <p class="w-[95%] md:w-[85%] text-sm md:text-md  text-center my-4">
         I'm a software developer from Malaga Spain, I am most interested and proficient in backend development using <span class="font-bold underline">Spring Boot</span> with Java, alongside <span class="font-bold underline">PostgreSQL</span>.
         I am also proficient in <span class="font-bold underline">Angular</span>.
         I love creating projects from scratch in my free time.
@@ -13,7 +13,7 @@
 
     <h1 class="text-3xl my-4">Studies</h1>
 
-    <ul class="list-none flex flex-col items-start justify-between w-[95%]">
+    <ul class="text-sm md:text-md list-none flex flex-col items-start justify-between w-[95%]">
 
         @for (study of studies; track study.title){
 
@@ -28,7 +28,7 @@
 
                 <a [href]="study.schoolUrl" target="_blank" class="self-start font-bold underline">{{ study.school }}</a>
 
-                <p class="my-2">
+                <p class="my-2 self-start">
                     {{ study.description }}
                 </p>
 
@@ -40,7 +40,7 @@
 
     <h1 class="text-3xl my-4">Experience</h1>
 
-    <ul class="list-none flex flex-col items-start justify-between w-[95%]">
+    <ul class="text-sm md:text-md  list-none flex flex-col items-start justify-between w-[95%]">
 
         @for (job of experience; track job.title) {
 
