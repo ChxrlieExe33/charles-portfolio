@@ -1,25 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Redirecting...</title>
-    <script>
-        // Store the current path and redirect to index.html
-        // Angular will handle the routing from there
-        var path = window.location.pathname.slice(1);
-        var query = window.location.search;
-        var hash = window.location.hash;
-
-        // Store the intended path in sessionStorage
-        if (path) {
-            sessionStorage.setItem('github-pages-redirect', path + query + hash);
-        }
-
-        // Redirect to the base URL
-        window.location.replace('/charles-portfolio/');
-    </script>
+    <title>Charles Crane</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
-<p>Redirecting to application...</p>
+<body class="mat-typography">
+<app-root></app-root>
 </body>
 </html>
