@@ -37,9 +37,6 @@ jobs:
     - name: Build Angular app
       run: npm run build -- --base-href /charles-portfolio/
       
-    - name: List dist contents (debug)
-      run: ls -la dist/
-      
     - name: Setup Pages
       uses: actions/configure-pages@v4
       
