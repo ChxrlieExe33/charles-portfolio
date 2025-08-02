@@ -35,7 +35,7 @@ jobs:
       run: npm ci
 
     - name: Build Angular app
-      run: npm run build -- --base-href /charles-portfolio/
+      run: npm run build -- --base-href /
 
     - name: Copy index.html to 404.html
       run: cp docs/browser/index.html docs/browser/404.html
