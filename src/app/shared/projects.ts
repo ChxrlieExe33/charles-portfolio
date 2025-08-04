@@ -9,6 +9,10 @@ export const projects : Project[] = [
             {
                 name : "Backend repository",
                 url: "https://github.com/ChxrlieExe33/social_konnect_backend"
+            },
+            {
+                name: "Frontend repository",
+                url: "https://github.com/ChxrlieExe33/social-konnect-front"
             }
         ]
     },
