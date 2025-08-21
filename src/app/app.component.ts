@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Router, RouterOutlet} from '@angular/router';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {HiddenMenuComponent} from './components/hidden-menu/hidden-menu.component';
+import {NavMenuService} from './shared/services/nav-menu.service';
 
 
 @Component({
@@ -14,10 +15,10 @@ export class AppComponent implements OnInit {
 
     openMenu : boolean = false;
 
-    constructor(private router: Router) {}
+    constructor(private router: Router, private navService : NavMenuService) {}
 
     setMenuOpen (state : boolean) {
-        this.openMenu = state;
+        this.navService.setNavMenuOpen(state);
     }
 
     ngOnInit() {
@@ -26,6 +27,13 @@ export class AppComponent implements OnInit {
             sessionStorage.removeItem('github-pages-redirect');
             this.router.navigateByUrl(redirect);
         }
+
+        this.subscribeToNavMenu();
+    }
+
+    subscribeToNavMenu () {
+
+        this.navService.navMenuOpen$.subscribe(val => this.openMenu = val);
     }
 
 }
