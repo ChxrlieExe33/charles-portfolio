@@ -4,7 +4,7 @@ export const projects : Project[] = [
     {
         id: "1",
         title: "Social-Konnect",
-        description: "This is my first project using Spring Boot, it has full JWT based authentication for stateless functionality, users can share posts, interact with posts, interact with other users, etc.",
+        description: "Social Konnect is a social media platform I developed using Spring Boot and Angular, it has full JWT authentication, sign up with email verification, forgot password functionality and more. The application can be used similarly to instagram or twitter, it features users, posts, likes, comments, follows, etc. I optimised functionalities with asynchronous event listeners and handled queries of entities with multiple relationships in efficient ways.",
         urls: [
             {
                 name : "Backend repository",
@@ -14,6 +14,10 @@ export const projects : Project[] = [
                 name: "Frontend repository",
                 url: "https://github.com/ChxrlieExe33/social-konnect-front"
             }
+        ],
+        images: [
+            "/social-ui.jpg",
+            "/search-page-better.png"
         ]
     },
     {

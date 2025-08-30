@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import {projects} from '../../shared/projects';
+import {ProjectComponent} from '../project/project.component';
 
 @Component({
   selector: 'app-project-list',
-  imports: [],
+    imports: [
+        ProjectComponent
+    ],
   templateUrl: './project-list.component.html',
   styleUrl: './project-list.component.css'
 })

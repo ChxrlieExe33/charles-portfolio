@@ -1,15 +1,85 @@
-<article class="flex flex-col items-start justify-between w-[40vw] bg-blue-600 text-white mt-[4vh] h-[35vh] rounded-lg p-[3vh]">
+<article class="w-[90%] md:w-[60%] p-8 rounded-xl bg-neutral-800/50 justify-self-center flex flex-col items-start justify-between gap-2">
 
-    <h1 class="text-2xl">{{ project()?.title }}</h1>
+    <h1 class="text-2xl mb-2 text-[#CD49D7]">{{ project().title }}</h1>
 
-    <p class="">{{ project()?.description }}</p>
+    <p>{{ project().description }}</p>
 
-    <div class="flex items-center justify-around mb-[3vh] self-center">
+    <!-- Image carousel -->
 
-        <a [href]="project()?.frontendLink" class="bg-black p-[1vh] rounded-xl">Frontend repository</a>
+    @if (postMedia() && postMedia().length > 0) {
+        <div class="relative w-[97%] border-y-1 rounded-xl overflow-hidden mt-4">
+            <!-- Media Container -->
+            <div class="overflow-hidden">
+                <div
+                    class="flex transition-transform duration-300 ease-in-out"
+                    [style.transform]="'translateX(-' + (currentMediaIndex * 100) + '%)'"
+                >
+                    @for (media of postMedia(); track media) {
+                        <div class="w-full flex-shrink-0">
+                            <img
+                                [src]="media"
+                                alt="Post media"
+                                class="w-full cursor-pointer h-full rounded-xl"
+                            />
+                        </div>
+                    }
+                </div>
+            </div>
 
-        <a [href]="project()?.backendLink" class="ml-[5vw] bg-black p-[1vh] rounded-xl">Backend repository</a>
+            <!-- Navigation Arrows (only show if more than 1 media item) -->
+            @if (postMedia().length > 1) {
+                <!-- Previous Button -->
+                <button
+                    class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-70 transition-opacity"
+                    (click)="previousMedia()"
+                    [disabled]="currentMediaIndex === 0"
+                    [class.opacity-50]="currentMediaIndex === 0"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </button>
 
-    </div>
+                <!-- Next Button -->
+                <button
+                    class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white rounded-full p-2 hover:bg-opacity-70 transition-opacity"
+                    (click)="nextMedia()"
+                    [disabled]="currentMediaIndex === postMedia().length - 1"
+                    [class.opacity-50]="currentMediaIndex === postMedia().length - 1"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+
+                <!-- Media Indicators -->
+                <div class="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    @for (media of postMedia(); track $index) {
+                        <button
+                            class="w-2 h-2 rounded-full transition-colors"
+                            [class]="currentMediaIndex === $index ? 'bg-white' : 'bg-white bg-opacity-50'"
+                            (click)="goToMedia($index)"
+                        ></button>
+                    }
+                </div>
+            }
+        </div>
+    }
+
+    <span class="flex items-center justify-items-start lg:justify-between flex-wrap md:flex-nowrap">
+
+        @for (link of project().urls; track link.name) {
+
+            <a target="_blank" [href]="link.url" class="bg-[#CD49D7]  text-sm md:text-md p-4 rounded-4xl m-4 hover:scale-105">
+
+                <h1>
+                    {{link.name}}
+                    <svg style="display: inline" width="1rem" height="1rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.33938 14.5896C1.44846 11.2534 2.31164 7.54623 4.92893 4.92893C8.83418 1.02369 15.1658 1.02369 19.0711 4.92893C22.9763 8.83418 22.9763 15.1658 19.0711 19.0711C16.4538 21.6884 12.7466 22.5515 9.41045 21.6606M15.0001 15.0001V9.0001M15.0001 9.0001H9.00014M15.0001 9.0001L4.99995 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </h1>
+
+            </a>
+
+        }
+    </span>
 
 </article>

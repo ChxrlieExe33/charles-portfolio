@@ -6,4 +6,5 @@ export type Project = {
         name: string,
         url: string,
     }[],
+    images? : string[]
 }
