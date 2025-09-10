@@ -4,13 +4,27 @@ export const experience : JobModel[] = [
     {
         title: "Assistant Manager",
         timeFrame: "Sep 2021 - Present",
-        description: "While working this job I have taken on many responsibilities, such as Sales, Customer relations, handling logistics of orders from factories and deliveries to clients. Also as the assistant manager, I have participated in the choice of new products to sell, which have lead to an increase in sales done.",
-        companyName: "Bed Sofa & Furniture Centre"
+        description: "While working as a salesman and later on, as Assistant Manager at Bed Sofa & Furniture Centre, I have overseen and participated in the following tasks:",
+        companyName: "Bed Sofa & Furniture Centre",
+        tasks: [
+            "Managed sales and meeting client needs.",
+            "Built and maintained strong customer relationships, increasing repeat business.",
+            "Coordinated logistics, including order management from factories and client deliveries.",
+            "Assisted in product selection, contributing to overall sales.",
+            "Supported management in day-to-day operations."
+        ]
     },
     {
         title: "Software developer Intern",
         timeFrame: "Mar 2021 - Jun 2021",
-        description: "While I was an Intern at El Sur Existe I was tasked with many jobs, which mainly consisted of development on the Wordpress platform, custom plugin debugging, optimization, etc. All of this was done using Docker. I also worked on networking and service deployment and used tools such as Proxmox, GitLab, etc.",
-        companyName: "El Sur Existe"
+        description: "While I was an Intern at El Sur Existe I took on the following roles and responsibilities:",
+        companyName: "El Sur Existe",
+        tasks: [
+            "Developed and maintained websites on the Wordpress platform, including custom plugin debugging and performance optimization.",
+            "Utilized docker for consistent development and deployment environments.",
+            "Assisted in networking and service deployment.",
+            "Gained hands on experience with tools such as Proxmox, GitLab, and related technologies.",
+            "Contributed to troubleshooting and improving overall system performance."
+        ]
     }
 ]

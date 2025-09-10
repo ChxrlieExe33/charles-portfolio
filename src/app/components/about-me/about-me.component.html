@@ -1,23 +1,23 @@
-<article class="bg-[#262626] text-white w-[95%] md:w-[60%] flex flex-col items-center justify-between py-5 mt-3 px-4 md:px-20 rounded-2xl">
+<article class="text-white w-[100%] md:w-[60%] flex flex-col items-center justify-between py-5 mt-3 md:px-20 rounded-2xl">
 
     <h1 class="text-3xl my-4">About me</h1>
 
     <p class="w-[95%] md:w-[85%] text-sm md:text-md  text-center my-4">
-        I'm a software developer from Malaga Spain, I am most interested and proficient in backend development using <span class="font-bold underline">Spring Boot</span> with Java, alongside <span class="font-bold underline">PostgreSQL</span>.
-        I am also proficient in <span class="font-bold underline">Angular</span>.
+        I'm a software developer from Malaga Spain, I am most interested and proficient in backend development using <span class="font-bold underline text-[#CD49D7]">Spring Boot</span> with Java, alongside <span class="font-bold underline text-[#CD49D7]">PostgreSQL</span>.
+        I am also proficient in <span class="font-bold underline text-[#CD49D7]">Angular</span>.
         I love creating projects from scratch in my free time.
 
         <br><br>
-        I am also very passionate about the world of <span class="font-bold underline">cybersecurity</span> and pentesting, I have the <span class="font-bold underline">PNPT Certification</span> from TCM Security, and I intend to advance my pentesting knowledge and skillset over time.
+        I am also very passionate about the world of <span class="font-bold underline text-[#CD49D7]">cybersecurity</span> and pentesting, I have the <span class="font-bold underline text-[#CD49D7]">PNPT Certification</span> from TCM Security, and I intend to advance my pentesting knowledge and skillset over time.
     </p>
 
     <h1 class="text-3xl my-4">Studies</h1>
 
-    <ul class="text-sm md:text-md list-none flex flex-col items-start justify-between w-[95%]">
+    <ul class="text-sm md:text-md list-none flex flex-col items-start justify-between w-[100%] gap-6">
 
         @for (study of studies; track study.title){
 
-            <li class="flex flex-col items-center justify-between w-full py-2">
+            <li class="flex flex-col items-center justify-between w-full px-4 py-2 shadow-[0_0_15px_2px_rgba(205,73,215,0.3)] rounded-xl">
 
                 <div class="flex items-center justify-between w-full">
 
@@ -38,13 +38,15 @@
 
     </ul>
 
-    <h1 class="text-3xl my-4">Experience</h1>
+    <span class="w-full h-2 bg-[#352939] rounded-2xl mt-8"></span>
 
-    <ul class="text-sm md:text-md  list-none flex flex-col items-start justify-between w-[95%]">
+    <h1 class="text-3xl my-6">Experience</h1>
+
+    <ul class="text-sm md:text-md list-none flex flex-col items-start justify-between w-[100%] gap-6">
 
         @for (job of experience; track job.title) {
 
-            <li class="flex flex-col items-center justify-between w-full py-2">
+            <li class="flex flex-col items-center justify-between w-full py-2 md:py-4 px-4 md:px-6 shadow-[0_0_15px_2px_rgba(205,73,215,0.3)] rounded-xl">
 
                 <div class="flex items-center justify-between w-full">
 
@@ -53,11 +55,21 @@
                     <p>{{ job.timeFrame }}</p>
                 </div>
 
-                <p class="self-start font-bold underline">{{ job.companyName }}</p>
+                <p class="self-start font-bold underline mb-2">{{ job.companyName }}</p>
 
-                <p class="my-2">
+                <p class="my-2 self-start">
                     {{ job.description }}
                 </p>
+
+                <ul class="w-full list-disc list-inside">
+
+                    @for (task of job.tasks; track $index) {
+
+                        <li class="pb-2">{{ task }}</li>
+
+                    }
+
+                </ul>
 
             </li>
 

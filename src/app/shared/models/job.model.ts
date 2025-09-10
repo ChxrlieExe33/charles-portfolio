@@ -3,4 +3,5 @@ export type JobModel = {
     timeFrame : string,
     description : string,
     companyName : string,
+    tasks: string[]
 }
