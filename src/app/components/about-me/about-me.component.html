@@ -5,28 +5,24 @@
       <h2 class="text-3xl font-black tracking-tight">About <span class="text-fuchsia-500">me</span></h2>
       <div class="hidden md:block h-[2px] flex-grow bg-gradient-to-r from-fuchsia-500/50 to-transparent"></div>
     </div>
-    
+
     <p class="text-lg leading-relaxed text-slate-600 dark:text-slate-400">
-      I'm a software developer from <span class="text-slate-900 dark:text-white font-semibold">Malaga, Spain</span>. 
-      I am most interested and proficient in backend development using 
-      <span class="text-fuchsia-600 dark:text-fuchsia-400 font-bold italic">Spring Boot</span> with Java, alongside 
-      <span class="text-fuchsia-600 dark:text-fuchsia-400 font-bold italic">PostgreSQL</span>. 
-      I am also proficient in <span class="text-fuchsia-600 dark:text-fuchsia-400 font-bold italic">Angular</span>. 
-      I love creating projects from scratch in my free time.
+        I am a software developer from <span class="text-slate-900 dark:text-white font-semibold">Málaga, Spain</span> specializing in building scalable, high-performance web applications with <span class="text-fuchsia-600 dark:text-fuchsia-400 font-bold italic">Spring Boot</span> and <span class="text-fuchsia-600 dark:text-fuchsia-400 font-bold italic">Angular</span>. I focus on creating clean backend architectures and intuitive, responsive frontend experiences.
+
+        <br><br>I also have a strong professional interest in <span class="text-fuchsia-600 dark:text-fuchsia-400 font-bold italic">DevOps</span>, infrastructure and <span class="text-fuchsia-600 dark:text-fuchsia-400 font-bold italic">cloud technologies</span>, particularly AWS, and continuously expand my knowledge in modern software delivery and infrastructure.
     </p>
 
     <div class="mt-6 p-4 rounded-2xl bg-fuchsia-500/5 border border-fuchsia-500/20 backdrop-blur-sm">
       <p class="text-md leading-relaxed">
-        I am also very passionate about the world of <span class="text-purple-600 dark:text-purple-400 font-bold">cybersecurity</span> and pentesting. 
-        I hold the <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-700 dark:text-purple-300 font-mono text-sm border border-purple-500/30">PNPT Certification</span> 
-        from TCM Security and intend to advance my knowledge over time.
+        I also hold the <a href="https://certified.tcm-sec.com/acd109a6-3843-4161-8575-1455b4ac69e6#acc.JHGNeTrw" class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-700 dark:text-purple-300 font-mono text-sm border border-purple-500/30">PNPT Certification</a>
+          from TCM Security as I am interested in <span class="text-purple-600 dark:text-purple-400 font-bold">application and infrastructure security</span>.
       </p>
     </div>
   </section>
 
   <section class="w-full mb-16">
     <h2 class="text-3xl font-black mb-8 text-center md:text-left italic">Studies</h2>
-    
+
     <div class="grid gap-6">
       @for (study of studies; track study.title) {
         <div class="group relative p-6 rounded-2xl bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-fuchsia-500/50 transition-all duration-300 shadow-sm hover:shadow-fuchsia-500/10">
@@ -47,19 +43,19 @@
 
   <section class="w-full">
     <h2 class="text-3xl font-black mb-8 text-center md:text-left italic">Experience</h2>
-    
+
     <div class="space-y-8">
       @for (job of experience; track job.title) {
         <div class="relative pl-8 border-l-2 border-slate-200 dark:border-slate-800 hover:border-fuchsia-500 transition-colors duration-500">
           <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-200 dark:bg-slate-800 border-2 border-white dark:border-slate-950 group-hover:bg-fuchsia-500 transition-colors"></div>
-          
+
           <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
             <h3 class="text-xl font-bold text-fuchsia-600 dark:text-fuchsia-400">{{ job.title }}</h3>
             <span class="text-sm font-mono text-slate-500">{{ job.timeFrame }}</span>
           </div>
-          
+
           <p class="font-extrabold text-slate-900 dark:text-white mb-4 tracking-tight">{{ job.companyName }}</p>
-          
+
           <p class="text-slate-600 dark:text-slate-400 mb-4 italic text-sm">
             {{ job.description }}
           </p>
