@@ -1,12 +1,6 @@
-<app-navbar (openMenu)="setMenuOpen($event)" ></app-navbar>
+<app-nav-menu />
 
-@if (this.openMenu) {
-
-    <app-hidden-menu (closeMenu)="setMenuOpen(!openMenu)"/>
-
-}
-
-<div class="w-full mt-[9vh] md:mt-[7vh]">
+<div class="w-full">
 
     <router-outlet />
 </div>

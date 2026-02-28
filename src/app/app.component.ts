@@ -3,13 +3,14 @@ import {Router, RouterOutlet} from '@angular/router';
 import {NavbarComponent} from './components/navbar/navbar.component';
 import {HiddenMenuComponent} from './components/hidden-menu/hidden-menu.component';
 import {NavMenuService} from './shared/services/nav-menu.service';
+import { NavMenuComponent } from "./components/nav-menu/nav-menu.component";
 
 
 @Component({
     selector: 'app-root',
-    imports: [NavbarComponent, RouterOutlet, HiddenMenuComponent],
+    imports: [RouterOutlet, NavMenuComponent],
     templateUrl: './app.component.html',
-    styleUrl: './app.component.css',
+    styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
 

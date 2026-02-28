@@ -1,0 +1,48 @@
+<nav class="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
+  <div class="w-full max-w-6xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-fuchsia-100 dark:border-fuchsia-900/30 rounded-full px-6 py-3 flex items-center justify-between shadow-lg shadow-fuchsia-500/5">
+    
+    <a routerLink="/" class="text-lg font-extrabold tracking-tight text-slate-900 dark:text-white">
+      charlescrane<span class="bg-gradient-to-r from-fuchsia-500 to-purple-600 bg-clip-text text-transparent">.dev</span>
+    </a>
+
+    <div class="hidden md:flex items-center gap-8 font-medium text-slate-600 dark:text-slate-300">
+      <a routerLink="/projects" routerLinkActive="text-fuchsia-600 dark:text-fuchsia-400" class="hover:text-fuchsia-500 transition-colors">Projects</a>
+      <a routerLink="/blog" routerLinkActive="text-fuchsia-600 dark:text-fuchsia-400" class="hover:text-fuchsia-500 transition-colors">Blog</a>
+      <a routerLink="/contact" routerLinkActive="text-fuchsia-600 dark:text-fuchsia-400" class="hover:text-fuchsia-500 transition-colors">Contact</a>
+    </div>
+
+    <button (click)="toggleMenu()" class="md:hidden p-2 text-fuchsia-600 dark:text-fuchsia-400 focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+  </div>
+</nav>
+
+@if (isMenuOpen()) {
+  <div class="relative z-[60]">
+    
+    <div 
+      (click)="closeMenu()" 
+      class="fixed inset-0 bg-fuchsia-950/20 backdrop-blur-sm animate-fade-in">
+    </div>
+
+    <div 
+      class="fixed inset-y-0 right-0 w-72 bg-white dark:bg-slate-900 shadow-2xl p-8 flex flex-col gap-8 border-l border-fuchsia-100 dark:border-fuchsia-900/30 animate-slide-in">
+      
+      <div class="flex justify-end">
+        <button (click)="closeMenu()" class="text-fuchsia-500 hover:rotate-90 transition-transform duration-300">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      
+      <nav class="flex flex-col gap-6 text-2xl font-bold">
+        <a routerLink="/projects" (click)="closeMenu()" routerLinkActive="text-fuchsia-600" class="text-slate-800 dark:text-slate-100">Projects</a>
+        <a routerLink="/blog" (click)="closeMenu()" routerLinkActive="text-fuchsia-600" class="text-slate-800 dark:text-slate-100">Blog</a>
+        <a routerLink="/contact" (click)="closeMenu()" routerLinkActive="text-fuchsia-600" class="text-slate-800 dark:text-slate-100">Contact</a>
+      </nav>
+    </div>
+  </div>
+}

@@ -2,6 +2,7 @@ export type Project = {
     id : string,
     title : string,
     description : string,
+    bulletPoints: string[],
     urls : {
         name: string,
         url: string,

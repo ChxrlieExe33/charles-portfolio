@@ -1,31 +1,45 @@
-<div class="flex flex-col md:flex-row items-center justify-center bg-gradient-to-r from-purple-500 to-pink-500 h-[600px] text-white p-[8%]">
+<div class="relative flex flex-col md:flex-row items-center justify-center min-h-[80vh] px-6 py-20 overflow-hidden bg-slate-50 dark:bg-slate-950">
+  
+  <div class="absolute top-1/4 -left-20 w-72 h-72 bg-fuchsia-500/10 blur-[120px] rounded-full"></div>
+  <div class="absolute bottom-1/4 -right-20 w-72 h-72 bg-purple-600/10 blur-[120px] rounded-full"></div>
 
-    <div class="md:w-[400px] w-[200px] bg-[#000000] md:h-[400px] h-[200px] rounded-[100%] flex items-center justify-center shadow-[0_0_30px_10px_rgba(168,85,247,0.7)]">
+  <div class="relative group">
+    <div class="absolute -inset-1 bg-gradient-to-r from-fuchsia-600 to-purple-600 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+    
+    <div class="relative w-48 h-48 md:w-80 md:h-80 bg-slate-200 dark:bg-slate-900 rounded-full flex items-center justify-center border border-white/10 shadow-2xl overflow-hidden">
+      <p class="text-slate-500 dark:text-slate-400 font-medium text-center px-4">
+        Insert PFP here later
+      </p>
+    </div>
+  </div>
 
-        <p class="text-white">Insert PFP here later</p>
-
+  <div class="md:w-1/2 mt-12 md:mt-0 md:ml-16 flex flex-col items-start space-y-6">
+    
+    <div class="space-y-2">
+      <h1 class="text-4xl md:text-6xl font-black text-slate-900 dark:text-white leading-tight">
+        Hi, I'm <span class="bg-gradient-to-r from-fuchsia-500 to-purple-600 bg-clip-text text-transparent">Charles!</span>
+      </h1>
     </div>
 
-    <div class="md:w-[50%] mt-[50px] md:mt-0 flex flex-col items-start justify-around md:ml-3">
+    <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed">
+      I am a <span class="text-slate-900 dark:text-white font-semibold">software developer</span> and 
+      <span class="text-slate-900 dark:text-white font-semibold">cybersecurity enthusiast</span> from Spain, 
+      currently mastering web development at <span class="italic">MEDAC/DAVANTE</span>.
+    </p>
 
-        <h1 class="text-3xl font-bold m-3">Hi, I'm Charles!</h1>
-
-        <p class="text-xl m-3">I am a software developer and cybersecurity enthusiast from Spain, currently learning web development at MEDAC/DAVANTE</p>
-
-        <span class="flex items-center justify-between w-[20%] pl-2 gap-2.5">
-
-            <a target="_blank" href="https://x.com/cc_pwnn">
-                <fa-icon size="3x" [icon]="faX"></fa-icon>
-            </a>
-            <a target="_blank" href="https://www.linkedin.com/in/charlesdavidcrane/">
-                <fa-icon size="3x" [icon]="faLinkedin"></fa-icon>
-            </a>
-            <a target="_blank" href="https://github.com/ChxrlieExe33">
-                <fa-icon size="3x" [icon]="faGithub"></fa-icon>
-            </a>
-
-        </span>
-
+    <div class="flex items-center gap-6">
+      <a target="_blank" href="https://x.com/cc_pwnn" 
+         class="text-slate-400 hover:text-fuchsia-500 transition-all duration-300 transform hover:scale-110">
+        <fa-icon [icon]="faX" size="2x"></fa-icon>
+      </a>
+      <a target="_blank" href="https://www.linkedin.com/in/charlesdavidcrane/" 
+         class="text-slate-400 hover:text-fuchsia-500 transition-all duration-300 transform hover:scale-110">
+        <fa-icon [icon]="faLinkedin" size="2x"></fa-icon>
+      </a>
+      <a target="_blank" href="https://github.com/ChxrlieExe33" 
+         class="text-slate-400 hover:text-fuchsia-500 transition-all duration-300 transform hover:scale-110">
+        <fa-icon [icon]="faGithub" size="2x"></fa-icon>
+      </a>
     </div>
-
+  </div>
 </div>

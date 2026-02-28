@@ -1,80 +1,80 @@
-<article class="text-white w-[100%] md:w-[60%] flex flex-col items-center justify-between py-5 mt-3 md:px-20 rounded-2xl">
+<article class="w-full max-w-4xl mx-auto flex flex-col items-center py-12 px-6 md:px-0 text-slate-900 dark:text-slate-100">
 
-    <h1 class="text-3xl my-4">About me</h1>
-
-    <p class="w-[95%] md:w-[85%] text-sm md:text-md  text-center my-4">
-        I'm a software developer from Malaga Spain, I am most interested and proficient in backend development using <span class="font-bold underline text-[#CD49D7]">Spring Boot</span> with Java, alongside <span class="font-bold underline text-[#CD49D7]">PostgreSQL</span>.
-        I am also proficient in <span class="font-bold underline text-[#CD49D7]">Angular</span>.
-        I love creating projects from scratch in my free time.
-
-        <br><br>
-        I am also very passionate about the world of <span class="font-bold underline text-[#CD49D7]">cybersecurity</span> and pentesting, I have the <span class="font-bold underline text-[#CD49D7]">PNPT Certification</span> from TCM Security, and I intend to advance my pentesting knowledge and skillset over time.
+  <section class="w-full mb-16 text-center md:text-left">
+    <div class="flex items-center gap-4 mb-6 justify-center md:justify-start">
+      <h2 class="text-3xl font-black tracking-tight">About <span class="text-fuchsia-500">me</span></h2>
+      <div class="hidden md:block h-[2px] flex-grow bg-gradient-to-r from-fuchsia-500/50 to-transparent"></div>
+    </div>
+    
+    <p class="text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+      I'm a software developer from <span class="text-slate-900 dark:text-white font-semibold">Malaga, Spain</span>. 
+      I am most interested and proficient in backend development using 
+      <span class="text-fuchsia-600 dark:text-fuchsia-400 font-bold italic">Spring Boot</span> with Java, alongside 
+      <span class="text-fuchsia-600 dark:text-fuchsia-400 font-bold italic">PostgreSQL</span>. 
+      I am also proficient in <span class="text-fuchsia-600 dark:text-fuchsia-400 font-bold italic">Angular</span>. 
+      I love creating projects from scratch in my free time.
     </p>
 
-    <h1 class="text-3xl my-4">Studies</h1>
+    <div class="mt-6 p-4 rounded-2xl bg-fuchsia-500/5 border border-fuchsia-500/20 backdrop-blur-sm">
+      <p class="text-md leading-relaxed">
+        I am also very passionate about the world of <span class="text-purple-600 dark:text-purple-400 font-bold">cybersecurity</span> and pentesting. 
+        I hold the <span class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-700 dark:text-purple-300 font-mono text-sm border border-purple-500/30">PNPT Certification</span> 
+        from TCM Security and intend to advance my knowledge over time.
+      </p>
+    </div>
+  </section>
 
-    <ul class="text-sm md:text-md list-none flex flex-col items-start justify-between w-[100%] gap-6">
+  <section class="w-full mb-16">
+    <h2 class="text-3xl font-black mb-8 text-center md:text-left italic">Studies</h2>
+    
+    <div class="grid gap-6">
+      @for (study of studies; track study.title) {
+        <div class="group relative p-6 rounded-2xl bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-fuchsia-500/50 transition-all duration-300 shadow-sm hover:shadow-fuchsia-500/10">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+            <h3 class="text-xl font-bold text-fuchsia-600 dark:text-fuchsia-400">{{ study.title }}</h3>
+            <span class="text-sm font-mono text-slate-500 uppercase tracking-widest">{{ study.timeFrame }}</span>
+          </div>
+          <a [href]="study.schoolUrl" target="_blank" class="text-slate-900 dark:text-white font-bold hover:underline decoration-fuchsia-500 decoration-2 underline-offset-4">{{ study.school }}</a>
+          <p class="mt-3 text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed">
+            {{ study.description }}
+          </p>
+        </div>
+      }
+    </div>
+  </section>
 
-        @for (study of studies; track study.title){
+  <div class="w-24 h-1 bg-gradient-to-r from-fuchsia-500 to-purple-600 rounded-full mb-16"></div>
 
-            <li class="flex flex-col items-center justify-between w-full px-4 py-2 border-1 border-gray-700/80 bg-neutral-800 shadow-lg shadow-neutral-700/50 rounded-xl">
+  <section class="w-full">
+    <h2 class="text-3xl font-black mb-8 text-center md:text-left italic">Experience</h2>
+    
+    <div class="space-y-8">
+      @for (job of experience; track job.title) {
+        <div class="relative pl-8 border-l-2 border-slate-200 dark:border-slate-800 hover:border-fuchsia-500 transition-colors duration-500">
+          <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-200 dark:bg-slate-800 border-2 border-white dark:border-slate-950 group-hover:bg-fuchsia-500 transition-colors"></div>
+          
+          <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+            <h3 class="text-xl font-bold text-fuchsia-600 dark:text-fuchsia-400">{{ job.title }}</h3>
+            <span class="text-sm font-mono text-slate-500">{{ job.timeFrame }}</span>
+          </div>
+          
+          <p class="font-extrabold text-slate-900 dark:text-white mb-4 tracking-tight">{{ job.companyName }}</p>
+          
+          <p class="text-slate-600 dark:text-slate-400 mb-4 italic text-sm">
+            {{ job.description }}
+          </p>
 
-                <div class="flex items-center justify-between w-full">
-
-                    <h1 class="font-bold underline text-[#CD49D7]">{{ study.title }}</h1>
-
-                    <p>{{ study.timeFrame }}</p>
-                </div>
-
-                <a [href]="study.schoolUrl" target="_blank" class="self-start font-bold underline">{{ study.school }}</a>
-
-                <p class="my-2 self-start">
-                    {{ study.description }}
-                </p>
-
-            </li>
-
-        }
-
-    </ul>
-
-    <span class="w-full h-2 bg-[#352939] rounded-2xl mt-8"></span>
-
-    <h1 class="text-3xl my-6">Experience</h1>
-
-    <ul class="text-sm md:text-md list-none flex flex-col items-start justify-between w-[100%] gap-6">
-
-        @for (job of experience; track job.title) {
-
-            <li class="flex flex-col items-center justify-between w-full py-2 md:py-4 px-4 md:px-6 border-1 border-gray-700/80 bg-neutral-800 shadow-lg shadow-neutral-700/50 rounded-xl">
-
-                <div class="flex items-center justify-between w-full">
-
-                    <h1 class="font-bold underline text-[#CD49D7]">{{ job.title }}</h1>
-
-                    <p>{{ job.timeFrame }}</p>
-                </div>
-
-                <p class="self-start font-bold underline mb-2">{{ job.companyName }}</p>
-
-                <p class="my-2 self-start">
-                    {{ job.description }}
-                </p>
-
-                <ul class="w-full list-disc list-inside">
-
-                    @for (task of job.tasks; track $index) {
-
-                        <li class="pb-2">{{ task }}</li>
-
-                    }
-
-                </ul>
-
-            </li>
-
-        }
-
-    </ul>
+          <ul class="space-y-2">
+            @for (task of job.tasks; track $index) {
+              <li class="flex items-start gap-3 text-slate-700 dark:text-slate-300 text-sm md:text-base">
+                <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-fuchsia-500"></span>
+                {{ task }}
+              </li>
+            }
+          </ul>
+        </div>
+      }
+    </div>
+  </section>
 
 </article>
