@@ -1,41 +1,36 @@
-<div class="relative flex flex-col md:flex-row items-center justify-center min-h-[80vh] px-6 py-20 overflow-hidden bg-slate-50 dark:bg-slate-950">
+<div class="relative flex flex-col items-center justify-center min-h-screen px-6 py-20 overflow-hidden text-center">
 
-  <div class="absolute top-1/4 -left-20 w-72 h-72 bg-fuchsia-500/10 blur-[120px] rounded-full"></div>
-  <div class="absolute bottom-1/4 -right-20 w-72 h-72 bg-purple-600/10 blur-[120px] rounded-full"></div>
-
-  <div class="relative group mt-10">
-    <div class="absolute -inset-1 bg-gradient-to-r from-fuchsia-600 to-purple-600 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-
-    <img src="/favicon.ico" class="relative w-48 h-48 md:w-80 md:h-80 bg-slate-200 dark:bg-slate-900 rounded-full flex items-center justify-center border border-white/10 shadow-2xl overflow-hidden">
-      <!--<p class="text-slate-500 dark:text-slate-400 font-medium text-center px-4">
-        Insert PFP here later
-      </p> -->
-  </div>
-
-  <div class="md:w-1/2 mt-12 md:mt-0 md:ml-16 flex flex-col items-start space-y-6">
-
-    <div class="space-y-2">
-      <h1 class="text-4xl md:text-6xl font-black text-slate-900 dark:text-white leading-tight">
-        Hi, I'm <span class="bg-gradient-to-r from-fuchsia-500 to-purple-600 bg-clip-text text-transparent">Charles!</span>
-      </h1>
+  <div class="z-10 flex flex-col items-center mt-10 md:mt-20 animate-fade-in">
+    <div class="text-fuchsia-400 font-mono text-xs md:text-sm tracking-widest uppercase mb-6 flex items-center">
+      Primary Stack: Angular • Spring Boot<span class="ml-1 inline-block w-1.5 h-4 bg-fuchsia-400 animate-pulse"></span>
     </div>
 
-    <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed">
-        I am a <span class="text-slate-900 dark:text-white font-semibold">software developer</span> from Málaga, Spain. With experience and knowledge in <span class="text-slate-900 dark:text-white font-semibold">Springboot</span> & <span class="text-slate-900 dark:text-white font-semibold">Angular</span>. <br>I deliver scalable & performant software, and can provision <span class="text-slate-900 dark:text-white font-semibold">AWS infrastructure</span> for deployment.
+    <h1 class="text-5xl md:text-7xl lg:text-[6rem] font-black text-white tracking-tight mb-4 flex items-center justify-center gap-4">
+      Charles Crane
+      <img src="/favicon.ico" class="w-12 h-12 md:w-16 md:h-16 rounded-full border border-white/10 hidden md:block">
+    </h1>
+    
+    <h2 class="text-xl md:text-3xl font-medium text-slate-300 mb-8 flex items-center justify-center gap-3">
+      <span class="text-fuchsia-500 font-mono">&gt;</span> Full-Stack Developer
+    </h2>
+
+    <p class="text-base md:text-lg text-slate-400 max-w-2xl leading-relaxed mb-12">
+        I build robust backend systems, design clean interfaces, and deploy cloud infrastructure. 
+        Focused on <span class="text-slate-200">Java</span>, <span class="text-slate-200">Spring Boot</span>, <span class="text-slate-200">Angular</span>, and <span class="text-slate-200">AWS</span>.
     </p>
 
     <div class="flex items-center gap-6">
-      <a target="_blank" href="https://x.com/cc_pwnn"
-         class="text-slate-400 hover:text-fuchsia-500 transition-all duration-300 transform hover:scale-110">
-        <fa-icon [icon]="faX" size="2x"></fa-icon>
+      <a target="_blank" href="https://github.com/ChxrlieExe33"
+         class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-fuchsia-500/50 hover:bg-fuchsia-500/10 transition-all duration-300">
+        <fa-icon [icon]="faGithub" size="lg"></fa-icon>
       </a>
       <a target="_blank" href="https://www.linkedin.com/in/charlesdavidcrane/"
-         class="text-slate-400 hover:text-fuchsia-500 transition-all duration-300 transform hover:scale-110">
-        <fa-icon [icon]="faLinkedin" size="2x"></fa-icon>
+         class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-fuchsia-500/50 hover:bg-fuchsia-500/10 transition-all duration-300">
+        <fa-icon [icon]="faLinkedin" size="lg"></fa-icon>
       </a>
-      <a target="_blank" href="https://github.com/ChxrlieExe33"
-         class="text-slate-400 hover:text-fuchsia-500 transition-all duration-300 transform hover:scale-110">
-        <fa-icon [icon]="faGithub" size="2x"></fa-icon>
+      <a target="_blank" href="https://x.com/cc_pwnn"
+         class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:border-fuchsia-500/50 hover:bg-fuchsia-500/10 transition-all duration-300">
+        <fa-icon [icon]="faX" size="lg"></fa-icon>
       </a>
     </div>
   </div>

@@ -1,13 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-
 @import "tailwindcss";
-/* You can add global styles to this file, and also import other style files */
 
-* {
-    font-family: "Poppins", sans-serif;
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
 body {
-    background-color: #1B1B1D;
+    background-color: #0b0b12 !important;
+    background-image: 
+        radial-gradient(circle at center, transparent 0%, #0b0b12 80%), 
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28'%3E%3Ccircle cx='14' cy='14' r='1.5' fill='%23555566'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat, repeat !important;
+    background-attachment: fixed, fixed !important;
+    background-position: center center, center center !important;
+    color: #e2e8f0;
+    font-family: var(--font-sans);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }

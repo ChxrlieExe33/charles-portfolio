@@ -1,37 +1,36 @@
-<article class="w-full max-w-4xl mx-auto flex flex-col items-center py-12 px-6 md:px-0 text-slate-900 dark:text-slate-100">
+<article class="w-full max-w-4xl mx-auto flex flex-col items-center py-12 px-6 md:px-0 text-slate-100 animate-fade-in">
 
   <section class="w-full mb-16 text-center md:text-left">
     <div class="flex items-center gap-4 mb-6 justify-center md:justify-start">
-      <h2 class="text-3xl font-black tracking-tight">About <span class="text-fuchsia-500">me</span></h2>
-      <div class="hidden md:block h-[2px] flex-grow bg-gradient-to-r from-fuchsia-500/50 to-transparent"></div>
+      <h2 class="text-3xl md:text-4xl font-black tracking-tight text-white">About <span class="text-fuchsia-400">me</span></h2>
     </div>
 
-    <p class="text-lg leading-relaxed text-slate-600 dark:text-slate-400">
-        I am a software developer from <span class="text-slate-900 dark:text-white font-semibold">Málaga, Spain</span> specializing in building scalable, high-performance web applications with <span class="text-fuchsia-600 dark:text-fuchsia-400 font-bold italic">Spring Boot</span> and <span class="text-fuchsia-600 dark:text-fuchsia-400 font-bold italic">Angular</span>. I focus on creating clean backend architectures and intuitive, responsive frontend experiences.
+    <p class="text-lg leading-relaxed text-slate-400">
+        I am a software developer from <span class="text-white font-semibold">Málaga, Spain</span> specializing in building scalable, high-performance web applications with <span class="text-fuchsia-400 font-bold">Spring Boot</span> and <span class="text-fuchsia-400 font-bold">Angular</span>. I focus on creating clean backend architectures and intuitive, responsive frontend experiences.
 
-        <br><br>I also have a strong professional interest in <span class="text-fuchsia-600 dark:text-fuchsia-400 font-bold italic">DevOps</span>, infrastructure and <span class="text-fuchsia-600 dark:text-fuchsia-400 font-bold italic">cloud technologies</span>, particularly AWS, and continuously expand my knowledge in modern software delivery and infrastructure.
+        <br><br>I also have a strong professional interest in <span class="text-fuchsia-400 font-bold">DevOps</span>, infrastructure and <span class="text-fuchsia-400 font-bold">cloud technologies</span>, particularly AWS, and continuously expand my knowledge in modern software delivery and infrastructure.
     </p>
 
-    <div class="mt-6 p-4 rounded-2xl bg-fuchsia-500/5 border border-fuchsia-500/20 backdrop-blur-sm">
-      <p class="text-md leading-relaxed">
-        I also hold the <a href="https://certified.tcm-sec.com/acd109a6-3843-4161-8575-1455b4ac69e6#acc.JHGNeTrw" class="px-2 py-0.5 rounded bg-purple-500/20 text-purple-700 dark:text-purple-300 font-mono text-sm border border-purple-500/30">PNPT Certification</a>
-          from TCM Security as I am interested in <span class="text-purple-600 dark:text-purple-400 font-bold">application and infrastructure security</span>.
+    <div class="mt-6 p-5 rounded-2xl bg-[#131318] border border-white/10 shadow-sm">
+      <p class="text-base leading-relaxed text-slate-300">
+        I also hold the <a href="https://certified.tcm-sec.com/acd109a6-3843-4161-8575-1455b4ac69e6#acc.JHGNeTrw" class="px-2 py-0.5 rounded bg-fuchsia-500/10 text-fuchsia-400 font-mono text-sm border border-fuchsia-500/20 hover:bg-fuchsia-500/20 transition-colors">PNPT Certification</a>
+          from TCM Security as I am interested in <span class="text-white font-semibold">application and infrastructure security</span>.
       </p>
     </div>
   </section>
 
   <section class="w-full mb-16">
-    <h2 class="text-3xl font-black mb-8 text-center md:text-left italic">Studies</h2>
+    <h2 class="text-2xl font-bold mb-8 text-center md:text-left text-white">Studies</h2>
 
     <div class="grid gap-6">
       @for (study of studies; track study.title) {
-        <div class="group relative p-6 rounded-2xl bg-white/50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-fuchsia-500/50 transition-all duration-300 shadow-sm hover:shadow-fuchsia-500/10">
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
-            <h3 class="text-xl font-bold text-fuchsia-600 dark:text-fuchsia-400">{{ study.title }}</h3>
-            <span class="text-sm font-mono text-slate-500 uppercase tracking-widest">{{ study.timeFrame }}</span>
+        <div class="group relative p-6 rounded-2xl bg-[#131318] border border-white/5 hover:border-white/10 hover:bg-[#1a1a24] transition-all duration-300">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
+            <h3 class="text-xl font-bold text-white">{{ study.title }}</h3>
+            <span class="text-xs font-mono text-slate-500 uppercase tracking-widest px-2 py-1 rounded bg-white/5 border border-white/5">{{ study.timeFrame }}</span>
           </div>
-          <a [href]="study.schoolUrl" target="_blank" class="text-slate-900 dark:text-white font-bold hover:underline decoration-fuchsia-500 decoration-2 underline-offset-4">{{ study.school }}</a>
-          <p class="mt-3 text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed">
+          <a [href]="study.schoolUrl" target="_blank" class="text-fuchsia-400 font-medium hover:text-fuchsia-300 transition-colors">{{ study.school }}</a>
+          <p class="mt-4 text-slate-400 text-sm md:text-base leading-relaxed">
             {{ study.description }}
           </p>
         </div>
@@ -39,31 +38,31 @@
     </div>
   </section>
 
-  <div class="w-24 h-1 bg-gradient-to-r from-fuchsia-500 to-purple-600 rounded-full mb-16"></div>
+  <div class="w-12 h-px bg-white/20 rounded-full mb-16"></div>
 
   <section class="w-full">
-    <h2 class="text-3xl font-black mb-8 text-center md:text-left italic">Experience</h2>
+    <h2 class="text-2xl font-bold mb-8 text-center md:text-left text-white">Experience</h2>
 
     <div class="space-y-8">
       @for (job of experience; track job.title) {
-        <div class="relative pl-8 border-l-2 border-slate-200 dark:border-slate-800 hover:border-fuchsia-500 transition-colors duration-500">
-          <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-200 dark:bg-slate-800 border-2 border-white dark:border-slate-950 group-hover:bg-fuchsia-500 transition-colors"></div>
+        <div class="relative pl-8 border-l border-white/10 hover:border-fuchsia-500/50 transition-colors duration-500">
+          <div class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-[#0b0b12] border-2 border-slate-600 group-hover:border-fuchsia-500 transition-colors"></div>
 
           <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
-            <h3 class="text-xl font-bold text-fuchsia-600 dark:text-fuchsia-400">{{ job.title }}</h3>
-            <span class="text-sm font-mono text-slate-500">{{ job.timeFrame }}</span>
+            <h3 class="text-xl font-bold text-white">{{ job.title }}</h3>
+            <span class="text-xs font-mono text-slate-500">{{ job.timeFrame }}</span>
           </div>
 
-          <p class="font-extrabold text-slate-900 dark:text-white mb-4 tracking-tight">{{ job.companyName }}</p>
+          <p class="font-semibold text-fuchsia-400 mb-4">{{ job.companyName }}</p>
 
-          <p class="text-slate-600 dark:text-slate-400 mb-4 italic text-sm">
+          <p class="text-slate-400 mb-6 text-sm leading-relaxed">
             {{ job.description }}
           </p>
 
-          <ul class="space-y-2">
+          <ul class="space-y-3">
             @for (task of job.tasks; track $index) {
-              <li class="flex items-start gap-3 text-slate-700 dark:text-slate-300 text-sm md:text-base">
-                <span class="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-fuchsia-500"></span>
+              <li class="flex items-start gap-3 text-slate-300 text-sm md:text-base leading-relaxed">
+                <span class="mt-2 h-1 w-1 flex-shrink-0 rounded-full bg-slate-600"></span>
                 {{ task }}
               </li>
             }

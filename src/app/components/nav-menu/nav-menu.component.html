@@ -1,47 +1,56 @@
-<nav class="fixed top-4 left-0 right-0 z-50 flex justify-center px-4">
-  <div class="w-full max-w-6xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-fuchsia-100 dark:border-fuchsia-900/30 rounded-full px-6 py-3 flex items-center justify-between shadow-lg shadow-fuchsia-500/5">
+<nav class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+  <div class="pointer-events-auto bg-[#131318]/90 backdrop-blur-xl border border-white/10 rounded-full px-2 py-1.5 flex items-center shadow-2xl transition-all">
     
-    <a routerLink="/" class="text-lg font-extrabold tracking-tight text-slate-900 dark:text-white">
-      charlescrane<span class="bg-gradient-to-r from-fuchsia-500 to-purple-600 bg-clip-text text-transparent">.dev</span>
+    <a routerLink="/" class="pl-4 pr-6 flex items-center group">
+      <svg viewBox="0 0 24 24" class="w-6 h-6 text-slate-300 group-hover:text-white transition-colors" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="16 18 22 12 16 6"></polyline>
+        <polyline points="8 6 2 12 8 18"></polyline>
+      </svg>
     </a>
 
-    <div class="hidden md:flex items-center gap-8 font-medium text-slate-600 dark:text-slate-300">
-      <a routerLink="/projects" routerLinkActive="text-fuchsia-600 dark:text-fuchsia-400" class="hover:text-fuchsia-500 transition-colors">Projects</a>
-      <a routerLink="/blog" routerLinkActive="text-fuchsia-600 dark:text-fuchsia-400" class="hover:text-fuchsia-500 transition-colors">Blog</a>
-      <a routerLink="/contact" routerLinkActive="text-fuchsia-600 dark:text-fuchsia-400" class="hover:text-fuchsia-500 transition-colors">Contact</a>
+    <div class="hidden md:flex items-center gap-1 font-medium text-sm text-slate-400">
+      <a routerLink="/projects" routerLinkActive="bg-fuchsia-500/10 text-fuchsia-400 border-fuchsia-500/20" [routerLinkActiveOptions]="{exact: false}" class="px-4 py-2 rounded-full hover:text-white transition-colors border border-transparent">Projects</a>
+      <a routerLink="/blog" routerLinkActive="bg-fuchsia-500/10 text-fuchsia-400 border-fuchsia-500/20" [routerLinkActiveOptions]="{exact: false}" class="px-4 py-2 rounded-full hover:text-white transition-colors border border-transparent">Blog</a>
     </div>
 
-    <button (click)="toggleMenu()" class="md:hidden p-2 text-fuchsia-600 dark:text-fuchsia-400 focus:outline-none">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-      </svg>
-    </button>
+    <div class="w-px h-6 bg-white/10 mx-3 hidden md:block"></div>
+
+    <div class="flex items-center gap-2 pr-2">
+      <a routerLink="/contact" class="hidden md:block px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 text-white text-sm font-medium transition-colors border border-white/5">
+        Contact
+      </a>
+      <button (click)="toggleMenu()" class="md:hidden p-2 text-slate-300 hover:text-white transition-colors focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
   </div>
 </nav>
 
 @if (isMenuOpen()) {
   <div class="relative z-[60]">
-    
     <div 
       (click)="closeMenu()" 
-      class="fixed inset-0 bg-fuchsia-950/20 backdrop-blur-sm animate-fade-in">
+      class="fixed inset-0 bg-[#0b0b12]/80 backdrop-blur-sm animate-fade-in">
     </div>
 
     <div 
-      class="fixed inset-y-0 right-0 w-72 bg-white dark:bg-slate-900 shadow-2xl p-8 flex flex-col gap-8 border-l border-fuchsia-100 dark:border-fuchsia-900/30 animate-slide-in">
+      class="fixed inset-y-0 right-0 w-72 bg-[#131318] shadow-2xl p-8 flex flex-col gap-8 border-l border-white/10 animate-slide-in">
       
       <div class="flex justify-end">
-        <button (click)="closeMenu()" class="text-fuchsia-500 hover:rotate-90 transition-transform duration-300">
+        <button (click)="closeMenu()" class="text-slate-400 hover:text-white hover:rotate-90 transition-all duration-300">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
       </div>
       
-      <nav class="flex flex-col gap-6 text-2xl font-bold">
-        <a routerLink="/projects" (click)="closeMenu()" routerLinkActive="text-fuchsia-600" class="text-slate-800 dark:text-slate-100">Projects</a>
-        <a routerLink="/blog" (click)="closeMenu()" routerLinkActive="text-fuchsia-600" class="text-slate-800 dark:text-slate-100">Blog</a>
-        <a routerLink="/contact" (click)="closeMenu()" routerLinkActive="text-fuchsia-600" class="text-slate-800 dark:text-slate-100">Contact</a>
+      <nav class="flex flex-col gap-6 text-xl font-medium">
+        <a routerLink="/" (click)="closeMenu()" class="text-slate-300 hover:text-white transition-colors">Home</a>
+        <a routerLink="/projects" (click)="closeMenu()" routerLinkActive="text-fuchsia-400" class="text-slate-300 hover:text-white transition-colors">Projects</a>
+        <a routerLink="/blog" (click)="closeMenu()" routerLinkActive="text-fuchsia-400" class="text-slate-300 hover:text-white transition-colors">Blog</a>
+        <a routerLink="/contact" (click)="closeMenu()" routerLinkActive="text-fuchsia-400" class="text-slate-300 hover:text-white transition-colors">Contact</a>
       </nav>
     </div>
   </div>
