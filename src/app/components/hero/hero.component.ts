@@ -14,4 +14,11 @@ export class HeroComponent {
     faX = faXTwitter;
     faLinkedin = faLinkedin;
     faGithub = faGithub;
+
+    scrollToNext(): void {
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
 }
