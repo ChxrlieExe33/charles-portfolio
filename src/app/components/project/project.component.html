@@ -43,7 +43,7 @@
         <div class="relative h-[250px] md:h-[350px] flex items-center justify-center overflow-hidden">
           
           <div class="flex h-full w-full transition-transform duration-500 ease-out"
-               [style.transform]="'translateX(-' + (currentMediaIndex * 100) + '%)'">
+               [style.transform]="'translateX(-' + (currentMediaIndex() * 100) + '%)'">
             @for (media of postMedia(); track media) {
               <div class="w-full h-full flex-shrink-0 flex items-center justify-center p-4">
                 <img [src]="media" 
@@ -55,11 +55,11 @@
 
           @if (postMedia().length > 1) {
             <div class="absolute inset-x-2 top-1/2 -translate-y-1/2 flex justify-between pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <button (click)="previousMedia()" [disabled]="currentMediaIndex === 0" 
+              <button (click)="previousMedia()" [disabled]="currentMediaIndex() === 0" 
                       class="pointer-events-auto p-2 rounded-full bg-black/50 border border-white/10 text-white hover:bg-fuchsia-500 hover:border-fuchsia-500 transition-all disabled:opacity-0 backdrop-blur-sm">
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
               </button>
-              <button (click)="nextMedia()" [disabled]="currentMediaIndex === postMedia().length - 1"
+              <button (click)="nextMedia()" [disabled]="currentMediaIndex() === postMedia().length - 1"
                       class="pointer-events-auto p-2 rounded-full bg-black/50 border border-white/10 text-white hover:bg-fuchsia-500 hover:border-fuchsia-500 transition-all disabled:opacity-0 backdrop-blur-sm">
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
               </button>
@@ -71,7 +71,7 @@
             <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
                 @for (m of postMedia(); track $index) {
                     <div class="h-1 rounded-full transition-all duration-300" 
-                         [class]="$index === currentMediaIndex ? 'w-4 bg-fuchsia-500' : 'w-1.5 bg-white/20'"></div>
+                         [class]="$index === currentMediaIndex() ? 'w-4 bg-fuchsia-500' : 'w-1.5 bg-white/20'"></div>
                 }
             </div>
         }
