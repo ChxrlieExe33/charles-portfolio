@@ -12,7 +12,7 @@ export const projects : Project[] = [
             "Multi-AZ deployment of resources for high-availability and failover",
             "Elasticache (redis) cluster for caching",
             "Dockerised backend running on ECS for scalable but simple to manage deployments"
-        ], 
+        ],
         urls : [
             {
                 name : "Backend & infrastructure repository",
@@ -25,6 +25,28 @@ export const projects : Project[] = [
     },
     {
         id: "2",
+        title: "Bed-Sofa & Furniture Centre website",
+        description: "The public website for Bed-Sofa & Furniture Centre, the place I work. Built using NextJS for rapid development, and for its SSR functionality to optimize SEO for good search rankings.",
+        bulletPoints: [
+            "Multiple pages with static information about the company",
+            "A showroom gallery page where products from the showroom can be listed for customers to browse",
+            "An admin panel to manage the gallery entries",
+            "Full internationalization using next-intl",
+            "SEO Optimization all across the website for improved search ranking",
+            "A contact form for sending messages to the team directly from the website"
+        ],
+        urls : [
+            {
+                name: "Website",
+                url: "https://bedshoplacala.es/",
+            }
+        ],
+        images: [
+            "/bedshopimg.png"
+        ]
+    },
+    {
+        id: "3",
         title: "Transakt microservices",
         description: "Transakt is an event-driven microservices backend built in Springboot.",
         bulletPoints: [
@@ -45,7 +67,7 @@ export const projects : Project[] = [
         ]
     },
     {
-        id: "3",
+        id: "4",
         title: "Social-Konnect",
         description: "Social Konnect is a social media platform built with Springboot & Angular.",
         bulletPoints: [

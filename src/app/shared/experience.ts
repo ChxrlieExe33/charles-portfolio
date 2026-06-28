@@ -11,7 +11,8 @@ export const experience : JobModel[] = [
             "Built and maintained strong customer relationships, increasing repeat business.",
             "Coordinated logistics, including order management from factories and client deliveries.",
             "Assisted in product selection, contributing to overall sales.",
-            "Supported management in day-to-day operations."
+            "Supported management in day-to-day operations.",
+            "Developed, deployed and maintained the public website for the company"
         ]
     },
     {
